@@ -1,0 +1,23 @@
+name: CI pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  Test-and-build:
+    runs-on: windows-latest
+    steps:
+      -name: download repository
+       uses: actions/checkout@v4
+
+      -name: download node_modules
+       uses: npm i
+
+      -name: start testing
+       uses: npm run test
+
+      -name: build
+       uses: npm run build
+
+      

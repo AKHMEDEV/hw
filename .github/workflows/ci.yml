@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  Test-and-build:
+  Test_and_build:
     runs-on: windows-latest
     steps:
       - name: download repository
@@ -19,5 +19,3 @@ jobs:
 
       - name: build
         uses: npm run build
-
-    

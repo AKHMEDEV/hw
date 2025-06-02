@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: download node_modules
-        uses: npm i
+        uses: npm install
 
       - name: start testing
         uses: npm run test
